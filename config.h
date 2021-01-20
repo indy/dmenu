@@ -8,12 +8,17 @@ static int min_width = 500;                    /* minimum width when centered */
 static const char *fonts[] = {
 	"Hack-11"
 };
+
+static const char col_dark[]        = "#1c1b19"; // bg1 from athens-theme
+static const char col_light[]       = "#c0b18b"; // same as dwm
+static const char col_hi[]          = "#bf8259"; // same as dwm
+
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
-           	/*     fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#1c1b19" },
-	[SchemeSel] = { "#eeeeee", "#4879af" },
-	[SchemeOut] = { "#000000", "#00ffff" },
+     	           /* fg         bg       */
+	[SchemeNorm] = { col_light, col_dark },
+	[SchemeSel]  = { col_dark,  col_hi },
+	[SchemeOut]  = { col_dark,  col_light }, // press Ctrl+Return to select multiple items
 };
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
 static unsigned int lines      = 20;
@@ -26,4 +31,4 @@ static unsigned int columns    = 1;
 static const char worddelimiters[] = " ";
 
 /* Size of the window border */
-static const unsigned int border_width = 2;
+static const unsigned int border_width = 1;
