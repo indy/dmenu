@@ -1,0 +1,2 @@
+#!/bin/sh
+cat "/home/indy/code/dmenu/isg_common" | dmenu "$@" | ${SHELL:-"/bin/sh"} &
