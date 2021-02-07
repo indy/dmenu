@@ -1,0 +1,3 @@
+#!/bin/sh
+# isg: installed by dmenu
+nautilus ~/Downloads
