@@ -9,9 +9,12 @@ static const char *fonts[] = {
 	"Hack-11"
 };
 
-static const char col_dark[]        = "#1c1b19"; // bg1 from athens-theme
-static const char col_light[]       = "#c0b18b"; // same as dwm
-static const char col_hi[]          = "#bf8259"; // same as dwm
+
+#define MONO_BG "#090909"
+#define MONO_FG "#dd9d5c"
+static const char col_dark[]        = MONO_BG; // bg0 from athens-theme
+static const char col_light[]       = MONO_FG;
+static const char col_hi[]          = MONO_FG;
 
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
